@@ -28,7 +28,6 @@
     min-height: 100vh;
   }
 
-  /* ── EDITOR BAR ── */
   .editor {
     background: #1a1a1a;
     border-bottom: 2px solid var(--orange);
@@ -162,7 +161,6 @@
   .print-btn:hover { background: var(--orange-dark); transform: translateY(-1px); }
   .print-btn:active { transform: translateY(0); }
 
-  /* ── SLIDE ── */
   .slide-wrapper {
     display: flex;
     justify-content: center;
@@ -410,7 +408,9 @@
   }
 
   .course-dot { width:5px; height:5px; background:var(--orange); border-radius:50%; flex-shrink:0; }
+  .course-dot-grey { width:5px; height:5px; background:var(--grey); border-radius:50%; flex-shrink:0; }
   .course-first { color: var(--orange-light); font-size: 10px; margin-left: 2px; }
+  .course-later { color: var(--grey); font-size: 10px; margin-left: 2px; }
 
   .badge {
     position: absolute;
@@ -462,7 +462,6 @@
     letter-spacing: 0.2px;
   }
 
-  /* ── PRINT: piilota editori, tulosta vain slide ── */
   @media print {
     @page { margin: 0; size: A4 landscape; }
     body { background: black; margin: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -564,16 +563,17 @@
         <div class="box-label">Ennakkomyyntikampanja 2026</div>
         <div class="campaign-badge">🔥 Ennakkohinta voimassa nyt</div>
         <div class="campaign-text">
-          <strong>Ensimmäinen koulutus saatavilla 1.5.2026</strong> — osta koulutukset nyt edulliseen ennakkohintaan. Loput koulutusaiheet avautuvat <strong>kesällä 2026.</strong>
+          <strong>Ennakoiva ajaminen &amp; Trukkikoulutus saatavilla nyt</strong> — osta koulutukset edulliseen ennakkohintaan. Loput koulutusaiheet avautuvat <strong>1.8.2026.</strong>
         </div>
         <div class="box-label">Koulutusaiheet</div>
         <ul class="course-list">
-          <li><span class="course-dot"></span>Ennakoiva ajaminen <span class="course-first">— saatavilla 1.5.2026</span></li>
-          <li><span class="course-dot"></span>Hätäensiapu</li>
-          <li><span class="course-dot"></span>Kuorman sidonta</li>
-          <li><span class="course-dot"></span>TTK-työturvallisuus</li>
-          <li><span class="course-dot"></span>Asiakaspalvelu</li>
-          <li><span class="course-dot"></span>Ajoneuvon huolto ja ylläpito</li>
+          <li><span class="course-dot"></span>Ennakoiva ajaminen <span class="course-first">— saatavilla nyt ✓</span></li>
+          <li><span class="course-dot"></span>Trukkikoulutus <span class="course-first">— saatavilla nyt ✓</span></li>
+          <li><span class="course-dot-grey"></span><span style="color:rgba(255,255,255,0.55)">Hätäensiapu</span> <span class="course-later">— 1.8.2026</span></li>
+          <li><span class="course-dot-grey"></span><span style="color:rgba(255,255,255,0.55)">Kuorman sidonta</span> <span class="course-later">— 1.8.2026</span></li>
+          <li><span class="course-dot-grey"></span><span style="color:rgba(255,255,255,0.55)">TTK-työturvallisuus</span> <span class="course-later">— 1.8.2026</span></li>
+          <li><span class="course-dot-grey"></span><span style="color:rgba(255,255,255,0.55)">Asiakaspalvelu</span> <span class="course-later">— 1.8.2026</span></li>
+          <li><span class="course-dot-grey"></span><span style="color:rgba(255,255,255,0.55)">Ajoneuvon huolto ja ylläpito</span> <span class="course-later">— 1.8.2026</span></li>
         </ul>
       </div>
 
